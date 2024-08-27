@@ -14,6 +14,20 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'primary-btn': '#ABEF5F',
+                'secondary-btn': 'rgba(171, 239, 95, 0.5)',
+              },
+            },
+          },
+        }
+    </script>
+
     <style>
         .font-manrope{
             font-family: "Manrope", sans-serif;
@@ -22,73 +36,148 @@
 
     
 </head>
-<body class="font-manrope">
-    <header class="container mx-auto">
+<body class="font-manrope w-full">
+    <header class="lg:container mx-auto bg-base-100 bg-gray-100">
         <!-- nav bar section -->
-        <div class="navbar bg-base-100 bg-gradient-to-r from-indigo-950">
-            <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 6h16M4 12h8m-8 6h16" />
-                  </svg>
+        <nav class="lg:w-10/12 lg:mx-auto">
+            <div class="navbar">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 6h16M4 12h8m-8 6h16" />
+                      </svg>
+                    </div>
+                    <ul
+                      tabindex="0"
+                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                      <li><a>Home</a></li>
+                      <li><a>Services</a></li>
+                      <li><a>Portfolio</a></li>
+                      <li><a>Blogs</a></li>
+                      <li><a>Contact Us</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-3xl font-bold">
+                    <i class="fa-solid fa-arrow-right bg-primary-btn w-10 h-10 rounded-full place-content-center -rotate-45"></i>
+                    Rinterio</a>
                 </div>
-                <ul
-                  tabindex="0"
-                  class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                  <li><a>Home</a></li>
-                  <li><a>Services</a></li>
-                  <li><a>Portfolio</a></li>
-                  <li><a>Blogs</a></li>
-                  <li><a>Contact Us</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-3xl font-bold">
-                <i class="fa-solid fa-arrow-right bg-[#ABEF5F] w-7 h-7 rounded-full place-content-center -rotate-45"></i>
-                Rinterio</a>
-            </div>
-            <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li class="text-[#737373] hover:text-green-600 font-bold"><a>Home</a></li>
-                <li class="text-[#737373] hover:text-green-600"><a>Services</a></li>
-                <li class="text-[#737373] hover:text-green-600"><a>Portfolio</a></li>
-                <li class="text-[#737373] hover:text-green-600"><a>Blogs</a></li>
-                <li class="text-[#737373] hover:text-green-600"><a>Contact Us</a></li>
-              </ul>
-            </div>
-
-            <div class="navbar-end flex space-x-4"> 
                 
-                <i class="fa-solid fa-magnifying-glass text-lg bg-white py-2 px-3.5 border-1 border-[#E9E9E9] rounded-full"></i>
-    
-                <div class="bg-white py-2 px-2 border-1 border-[#E9E9E9] rounded-full">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                    </svg>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li class="text-[#737373] hover:text-green-600 font-bold"><a>Home</a></li>
+                    <li class="text-[#737373] hover:text-green-600"><a>Services</a></li>
+                    <li class="text-[#737373] hover:text-green-600"><a>Portfolio</a></li>
+                    <li class="text-[#737373] hover:text-green-600"><a>Blogs</a></li>
+                    <li class="text-[#737373] hover:text-green-600"><a>Contact Us</a></li>
+                  </ul>
                 </div>
-                  
-              <a class="btn bg-[#ABEF5F] rounded-3xl place-content-center font-bold">Book Consult
-                <i class="fa-solid fa-arrow-right text-white bg-black w-5 h-5 rounded-full place-content-center -rotate-45"></i>
-              </a>
+    
+                <div class="navbar-end flex space-x-4"> 
+                    
+                    <i class="fa-solid fa-magnifying-glass text-lg bg-white py-2 px-3.5 border-2 border-[#E9E9E9] rounded-full"></i>
+        
+                    <div class="bg-white py-2 px-2 border-2 border-[#E9E9E9] rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </div>
+                      
+                  <a class="btn bg-primary-btn rounded-3xl place-content-center font-bold">Book Consult
+                    <i class="fa-solid fa-arrow-right text-white bg-black w-5 h-5 rounded-full place-content-center -rotate-45"></i>
+                  </a>
+                </div>
             </div>
-        </div>
+        </nav>
 
         <!-- banner section -->
-        <div>
+        <div class="pb-10 lg:pb-28">
+            <div class="w-3/5 mx-auto text-center space-y-5">
+                <!-- img area -->
+                <div class="flex justify-center">
+                    <img class="" src="assets/banner.png" alt="">
+                </div>
 
+                <!-- text area -->
+                <div class="space-y-6">
+                    <h1 class="text-3xl md:text-6xl font-extrabold text-[#212121]">Abarn house of this design has a striking appearance</h1>
+                    <p class="font-medium text-base text-[#494949]">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents, and large windows that flood the space with natural light.</p>
+    
+                    <a class="btn bg-secondary-btn rounded-3xl place-content-center font-bold text-md lg:text-xl text-[#212121]">View Details
+                        <i class="fa-solid fa-arrow-right bg-[#ABEF5F] w-7 h-7 rounded-full place-content-center -rotate-45"></i>
+                      </a>
+                </div>
+            </div>
         </div>
-
-
     </header>
+
+    <main class="lg:container mx-auto">
+
+        <!-- About us section -->
+        <section class="bg-gray-200">
+            <div class="py-3 lg:py-28">
+                <!-- top arrow img -->
+                <img class="invisible lg:visible lg:relative lg:-top-4 lg:left-24" src="assets/Vector.png" alt="">
+
+                <div class="flex flex-col lg:flex-row px-4 lg:justify-between lg:w-10/12 lg:mx-auto ">
+                    <div class="lg:w-3/5">
+                        <!-- main text are -->
+                        <div class="space-y-5 text-center lg:text-start lg:w-10/12">
+                            <!-- Small button -->
+                            <button class="btn btn-sm rounded-3xl font-bold text-[#494949] text-base bg-white">
+                                <i class="fa-solid fa-arrow-right rounded-full place-content-cente text-[#494949]"></i>About Us
+                            </button>
+    
+                            <!-- text area -->
+                            <h2 class="font-bold text-4xl text-[#212121]">We design thoughtful, <br>liveable spaces</h2>
+    
+                            <p class="font-medium text-base text-[#494949] pb-7">The barn house are made in thought of people who seek peace and calmness. Our barn house gives you the unforgettable experience that will make you return always.</p>
+                        </div>
+    
+                        <div class="flex pb-6">
+                            <!-- card container -->
+                            <div class="space-y-4">
+                                <!-- card 1 - lg:w-9/12 -->
+                                <div class="bg-white flex lg:w-10/12 pl-6 py-5 rounded-2xl">
+                                <img class="w-28 h-24" src="assets/commercial.png" alt="">
+    
+                                <div class="px-7 place-self-center">
+                                    <h3 class="text-xl font-extrabold text-[#494949]">Commercial</h3>
+                                    <p class="text-base font-medium text-[#737373] w-5/6">It's one of the hot-spot thats going viral. Out from the crowded city and a mix of nature blend.</p>
+                                </div>
+                                </div>
+    
+                                <!-- card 2 -->
+                                <div class="bg-white flex lg:w-10/12 pl-6 py-5 rounded-2xl">
+                                <img class="w-28 h-24" src="assets/residential.png" alt="">
+    
+                                <div class="px-7 place-self-center">
+                                    <h3 class="text-xl font-extrabold text-[#494949]">Residential</h3>
+                                    <p class="text-base font-medium text-[#737373] w-5/6">It's a very quiet place with big fields filled with nature.</p>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- image card -->
+                    <div class="flex lg:w-auto lg:h-auto ">
+                        <img src="assets/Rectangle.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
     
     
     
